@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ShopActivity">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="Welcome Tom!"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/categories_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shop by Categories"
+        android:textSize="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/welcome_text" />
+
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categories_text"
+        android:stretchColumns="*" >
+        <TableRow>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/amazon"
+                android:onClick="onHome"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/amazon"
+                android:onClick="onBeauty"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textAlignment="center"
+                android:text="Home and Kitchen"
+                android:onClick="onHome"/>
+            <TextView
+                android:textAlignment="center"
+                android:text="Beauty and personal care"
+                android:onClick="onBeauty"/>
+        </TableRow>
+        <TableRow android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/amazon"
+                android:onClick="onPet"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/amazon"
+                android:onClick="onToy"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textAlignment="center"
+                android:text="Pet supplies"
+                android:onClick="onPet"/>
+            <TextView
+                android:textAlignment="center"
+                android:text="Toys and games"
+                android:onClick="onToy"/>
+        </TableRow>
+    </TableLayout>
+
+
+
+
+
+
+</RelativeLayout>
